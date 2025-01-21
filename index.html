@@ -14,28 +14,54 @@
           <h3 class="board-title">HOME</h3>
           <div
             id="home-board"
-            class="board"></div>
+            class="board">
+            0
+          </div>
           <div class="board-btn-wrapper">
-            <button class="btn">+1</button>
-            <button class="btn">+2</button>
-            <button class="btn">+3</button>
+            <button
+              class="btn"
+              onclick="addHomeValue(1)">
+              +1
+            </button>
+            <button
+              class="btn"
+              onclick="addHomeValue(2)">
+              +2
+            </button>
+            <button
+              class="btn"
+              onclick="addHomeValue(3)">
+              +3
+            </button>
           </div>
         </section>
         <section class="board-wrapper">
           <h3 class="board-title">GUEST</h3>
           <div
-            id="home-board"
-            class="board"></div>
+            id="guest-board"
+            class="board">
+            0
+          </div>
           <div class="board-btn-wrapper">
-            <button class="btn">+1</button>
-            <button class="btn">+2</button>
-            <button class="btn">+3</button>
+            <button
+              class="btn"
+              onclick="addGuestValue(1)">
+              +1
+            </button>
+            <button
+              class="btn"
+              onclick="addGuestValue(2)">
+              +2
+            </button>
+            <button
+              class="btn"
+              onclick="addGuestValue(3)">
+              +3
+            </button>
           </div>
         </section>
       </div>
     </div>
-    <script
-      type="module"
-      src="assets/js/index.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
