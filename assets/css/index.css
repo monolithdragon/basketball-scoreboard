@@ -1,8 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'Cursed Timer ULiL';
+  src: url('../fonts/CursedTimerUlil-Aznm.ttf');
+}
+
 body {
-    margin: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreboard {
+  width: 600px;
+  height: 400px;
+  background-color: #131c2a;
+  color: #f3f4f6;
 }
 
 .container {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+}
+
+.board-wrapper {
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Roboto', serif;
+}
+
+.board {
+  width: 145px;
+  height: 60px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  font-size: 4rem;
+  color: #fcd34d;
+  font-family: 'Cursed Timer ULiL', sans-serif;
+  background-color: rgba(252, 211, 77, 0.1);
+}
+
+.board-btn-wrapper {
+  margin-top: 20px;
+}
+
+.btn {
+  width: 45px;
+  height: 45px;
+  color: #9aabd8;
+  border-color: #9aabd8;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: 'Cursed Timer ULiL', sans-serif;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #406cda;
+  border-color: #406cda;
 }
