@@ -29,19 +29,19 @@ body {
   text-align: center;
 }
 
-h3 {
+h3,
+h4 {
   font-family: 'Roboto', serif;
 }
 
 .board {
   width: 145px;
   height: 60px;
-  padding-top: 5px;
-  padding-bottom: 3px;
   font-size: 4rem;
-  color: #fcd34d;
+  color: #3cff00;
+  padding-top: 3px;
   font-family: 'Cursed Timer ULiL', sans-serif;
-  background-color: rgba(252, 211, 77, 0.1);
+  background-color: rgba(60, 255, 0, 0.1);
 }
 
 .board-btn-wrapper {
@@ -62,4 +62,34 @@ h3 {
 .btn:hover {
   color: #406cda;
   border-color: #406cda;
+}
+
+.period,
+.timer {
+  height: 40px;
+  font-size: 2.5rem;
+  color: #e80d35;
+  background-color: rgba(232, 13, 53, 0.1);
+  margin-top: 10px;
+}
+
+.timer {
+  border: 2px solid #f3f4f6;
+}
+
+.period-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  padding-block: 2.5px;
+}
+
+.period {
+  width: 35px;
+  margin: 0;
+}
+
+hr {
+  margin-block: 20px;
 }

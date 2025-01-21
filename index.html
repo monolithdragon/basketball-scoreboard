@@ -15,7 +15,7 @@
           <div
             id="home-board"
             class="board">
-            0
+            000
           </div>
           <div class="board-btn-wrapper">
             <button
@@ -36,11 +36,31 @@
           </div>
         </section>
         <section class="board-wrapper">
+          <div class="board timer">
+            <span id="timer-hours">00</span>:<span id="timer-minutes">00</span>
+          </div>
+          <div class="period-wrapper">
+            <h4 class="board-title">PERIOD</h4>
+            <div
+              id="period-board"
+              class="board period">
+              1
+            </div>
+          </div>
+          <div class="board-btn-wrapper">
+            <button
+              class="btn"
+              onclick="addPeriodValue()">
+              +1
+            </button>
+          </div>
+        </section>
+        <section class="board-wrapper">
           <h3 class="board-title">GUEST</h3>
           <div
             id="guest-board"
             class="board">
-            0
+            000
           </div>
           <div class="board-btn-wrapper">
             <button
@@ -61,6 +81,7 @@
           </div>
         </section>
       </div>
+      <hr />
     </div>
     <script src="assets/js/index.js"></script>
   </body>
