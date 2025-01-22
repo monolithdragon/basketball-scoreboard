@@ -34,6 +34,14 @@ h4 {
   font-family: 'Roboto', serif;
 }
 
+h3 {
+  font-weight: 900;
+}
+
+h4 {
+  margin: 10px 0;
+}
+
 .board {
   width: 145px;
   height: 60px;
@@ -45,7 +53,7 @@ h4 {
 }
 
 .board-btn-wrapper {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .btn {
@@ -65,7 +73,8 @@ h4 {
 }
 
 .period,
-.timer {
+.timer,
+.clock {
   height: 40px;
   font-size: 2.5rem;
   color: #e80d35;
@@ -82,7 +91,7 @@ h4 {
   align-items: center;
   justify-content: center;
   column-gap: 10px;
-  padding-block: 2.5px;
+  padding-block: 12px;
 }
 
 .period {
@@ -92,4 +101,17 @@ h4 {
 
 hr {
   margin-block: 20px;
+}
+
+.foults {
+  width: 70px;
+  height: 40px;
+  color: #fff201;
+  background-color: rgba(255, 242, 1, 0.1);
+  font-size: 2.5rem;
+}
+
+.clock {
+  width: 70px;
+  margin: 0 auto;
 }

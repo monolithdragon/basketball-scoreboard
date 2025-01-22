@@ -9,8 +9,8 @@
   </head>
   <body>
     <div class="scoreboard">
-      <div class="container">
-        <section class="board-wrapper">
+      <section class="container">
+        <div class="board-wrapper">
           <h3 class="board-title">HOME</h3>
           <div
             id="home-board"
@@ -34,10 +34,10 @@
               +3
             </button>
           </div>
-        </section>
-        <section class="board-wrapper">
+        </div>
+        <div class="board-wrapper">
           <div class="board timer">
-            <span id="timer-hours">00</span>:<span id="timer-minutes">00</span>
+            <span id="timer-minutes">00</span>:<span id="timer-seconds">00</span>
           </div>
           <div class="period-wrapper">
             <h4 class="board-title">PERIOD</h4>
@@ -54,8 +54,8 @@
               +1
             </button>
           </div>
-        </section>
-        <section class="board-wrapper">
+        </div>
+        <div class="board-wrapper">
           <h3 class="board-title">GUEST</h3>
           <div
             id="guest-board"
@@ -79,9 +79,49 @@
               +3
             </button>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
       <hr />
+      <section class="container">
+        <div class="board-wrapper">
+          <h4 class="board-title">FOULTS</h4>
+          <div
+            id="foults-home"
+            class="board foults">
+            00
+          </div>
+          <div class="board-btn-wrapper">
+            <button
+              class="btn"
+              onclick="addHomeFoults()">
+              +1
+            </button>
+          </div>
+        </div>
+        <div class="board-wrapper">
+          <h4 class="board-title">SHOT CLOCK</h4>
+          <div
+            id="shot-clock"
+            class="board clock">
+            30
+          </div>
+        </div>
+        <div class="board-wrapper">
+          <h4 class="board-title">FOULTS</h4>
+          <div
+            id="foults-guest"
+            class="board foults">
+            00
+          </div>
+          <div class="board-btn-wrapper">
+            <button
+              class="btn"
+              onclick="addGuestFoults()">
+              +1
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
     <script src="assets/js/index.js"></script>
   </body>

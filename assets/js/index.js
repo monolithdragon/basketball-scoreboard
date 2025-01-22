@@ -1,23 +1,29 @@
 const homeBoard = document.getElementById('home-board');
 const guestBoard = document.getElementById('guest-board');
-const timerHours = document.getElementById('timer-hours');
+const timerSeconds = document.getElementById('timer-seconds');
 const timerMinutes = document.getElementById('timer-minutes');
 const period = document.getElementById('period-board');
+const foultsHome = document.getElementById('foults-home');
+const foultsGuest = document.getElementById('foults-guest');
+const shotClock = document.getElementById('shot-clock');
 
 let homeCounter = 0;
 let guestCounter = 0;
 let minutes = 0;
 let periodCounter = 1;
 let startedTime = new Date().getTime();
+let shotStartedTime = 30;
+let homeFoultsCounter = 0;
+let guestFoultsCounter = 0;
 
 function addHomeValue(value) {
   homeCounter += value;
-  homeBoard.textContent = borderPad(homeCounter);
+  homeBoard.textContent = boardPad(homeCounter);
 }
 
 function addGuestValue(value) {
   guestCounter += value;
-  guestBoard.textContent = borderPad(guestCounter);
+  guestBoard.textContent = boardPad(guestCounter);
 }
 
 function timerTick() {
@@ -32,13 +38,24 @@ function timerTick() {
     }
   }
 
-  timerHours.textContent = pad(minutes);
-  timerMinutes.textContent = pad(diffInSeconds);
+  timerMinutes.textContent = pad(minutes);
+  timerSeconds.textContent = pad(diffInSeconds);
+}
+
+function shotTick() {
+  shotStartedTime--;
+
+  if (shotStartedTime < 0) {
+    shotStartedTime = 30;
+  }
+
+  shotClock.textContent = pad(shotStartedTime);
 }
 
 setInterval(() => timerTick(), 1000);
+setInterval(() => shotTick(), 1000);
 
-function borderPad(number) {
+function boardPad(number) {
   if (number < 100 && number < 10) {
     return '00' + number;
   } else if (number < 100 && number >= 10) {
@@ -60,4 +77,14 @@ function addPeriodValue() {
   }
 
   period.textContent = periodCounter;
+}
+
+function addHomeFoults() {
+  homeFoultsCounter++;
+  foultsHome.textContent = pad(homeFoultsCounter);
+}
+
+function addGuestFoults() {
+  guestFoultsCounter++;
+  foultsGuest.textContent = pad(guestFoultsCounter);
 }
